@@ -1,5 +1,21 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# Integration Process: React with Firestore
+
+## Setting Up Firebase Configuration
+- Created a `firebaseConfig.js` file to initialize and export the Firebase app instance.
+- This configuration is essential for establishing a connection with the Firestore database.
+
+## Fetching Data
+- Utilized the `useEffect` hook in the `DataDisplay` component to fetch data from the Firestore collection named "message".
+- Used the `getDocs` function from Firestore to retrieve documents from the collection asynchronously.
+- Iterated over the `querySnapshot` using `forEach` and built an array of objects containing document IDs and data.
+- Set the state variable `data` using `setData` to trigger a re-render with the fetched data.
+
+## Displaying Data
+- Mapped over the `data` array in JSX and rendered each item as a list item (`<li>`).
+- Within each list item, displayed the `name` and `message` properties of the data.
+
 ## Getting Started
 
 First, run the development server:

@@ -21,12 +21,12 @@ export default function DataDisplay() {
     <div>
       <h2>Data</h2>
       <ul>
-        {data.map((data) => {
+        {data.map((data) => ( 
           <li key={data.id}>
             <h3>{data.name}</h3>
             <p>{data.message}</p>
-          </li>;
-        })}
+          </li>
+        ))}
       </ul>
     </div>
   );
