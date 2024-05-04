@@ -5,7 +5,7 @@ import { db } from "./firebaseConfig";
 export default function DataDisplay() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetchData = async () => {
+    const fetchData = async () => {
       const querySnapShot = await getDocs(collection(db, "message"));
       const dataArray = [];
 
